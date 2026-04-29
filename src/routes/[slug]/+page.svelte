@@ -68,6 +68,7 @@
   <div class="body" bind:this={bodyEl}>
     <div class="meta vt-partlabel">
       <span class="year">{section.year}</span>
+      <img class="qr" src="{base}/qr/{section.num}.svg" alt="Scan to open page {section.num}" width="140" height="140" />
     </div>
 
     <div class="number">{section.num}</div>
@@ -199,6 +200,15 @@
     letter-spacing: -0.01em;
     color: var(--ink);
     margin-top: 0.3rem;
+  }
+
+  .qr {
+    width: 140px;
+    height: 140px;
+    margin-top: 0.8rem;
+    display: block;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
   }
 
   .number {
